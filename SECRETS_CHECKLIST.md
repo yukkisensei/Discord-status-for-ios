@@ -17,7 +17,7 @@ MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/discord-status
 DISCORD_CLIENT_ID=1234567890123456789
 ```
 - 📍 **Lấy từ:** https://discord.com/developers/applications
-- 🔧 **Setup:** New Application → OAuth2 → General → Copy Client ID
+- 🔧 **Setup:** New Application (tên: "Custom Status App") → OAuth2 → General → Copy Client ID
 - 💰 **Chi phí:** FREE
 
 ---

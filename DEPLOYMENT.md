@@ -12,7 +12,7 @@
 
 1. Vào https://discord.com/developers/applications
 2. Click "New Application"
-3. Đặt tên: "Discord Custom Status"
+3. Đặt tên: "Custom Status App" (không được chứa từ "discord")
 4. Vào tab **OAuth2** → **General**:
    - Copy **Client ID**
    - Copy **Client Secret**

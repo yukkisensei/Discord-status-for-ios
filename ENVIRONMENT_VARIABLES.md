@@ -48,7 +48,7 @@ DISCORD_REDIRECT_URI=http://localhost:5000/auth/discord/callback
 ### **Lấy Từ Đâu:**
 1. Vào https://discord.com/developers/applications
 2. Click "New Application"
-3. Đặt tên: "Discord Custom Status"
+3. Đặt tên: "Custom Status App" (không được chứa từ "discord")
 4. Tab **OAuth2** → General:
    - Copy **Client ID**
    - Copy **Client Secret** (click Reset nếu chưa thấy)
