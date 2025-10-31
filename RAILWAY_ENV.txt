@@ -1,0 +1,35 @@
+# ===================================================================
+# RAILWAY PRODUCTION ENVIRONMENT VARIABLES
+# Copy tất cả variables này vào Railway Dashboard
+# ===================================================================
+
+NODE_ENV=production
+
+# MongoDB Database
+MONGODB_URI=mongodb+srv://yukkisensei:Yukki_1802@yuu.yelpdn0.mongodb.net/Yuu?retryWrites=true&w=majority&appName=Yuu
+
+# Discord OAuth Application
+DISCORD_CLIENT_ID=1433795871128031383
+DISCORD_CLIENT_SECRET=ghzYNEsJRef1HEzNEZ164HzzV00mRWcA
+DISCORD_REDIRECT_URI=https://discord-status-for-ios-production.up.railway.app/auth/discord/callback
+
+# Session Secret (Production - MUST BE DIFFERENT FROM LOCAL!)
+SESSION_SECRET=prod_railway_secret_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
+
+# Cloudinary Image Storage
+CLOUDINARY_CLOUD_NAME=dcnjcuceg
+CLOUDINARY_API_KEY=133736299627539
+CLOUDINARY_API_SECRET=5caDfrG8hCv9omPR9IotgWUHt0Q
+
+# Frontend URL (Vercel)
+CLIENT_URL=https://discord-status-for-ios.vercel.app
+
+# ===================================================================
+# IMPORTANT NOTES:
+# ===================================================================
+# 1. SESSION_SECRET được generate random cho production
+# 2. DISCORD_REDIRECT_URI phải match với Railway domain
+# 3. CLIENT_URL phải match với Vercel domain
+# 4. Nhớ add redirect URI vào Discord Developer Portal:
+#    https://discord-status-for-ios-production.up.railway.app/auth/discord/callback
+# ===================================================================
