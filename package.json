@@ -1,0 +1,29 @@
+{
+  "name": "discord-status-custom",
+  "version": "1.0.0",
+  "description": "Custom Discord Status Website with Liquid Glass UI",
+  "main": "server/index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yukkisensei/Discord-status-for-ios.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yukkisensei/Discord-status-for-ios/issues"
+  },
+  "homepage": "https://github.com/yukkisensei/Discord-status-for-ios#readme",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "keywords": ["discord", "status", "custom"],
+  "author": "yukkisensei",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
