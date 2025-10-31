@@ -21,10 +21,24 @@ const extraOrigins = (process.env.CORS_ORIGINS || '')
   .filter(Boolean);
 const allowedOrigins = [defaultOrigin, ...extraOrigins];
 
+const regexOrigins = (process.env.CORS_ALLOW_REGEX || '')
+  .split(',')
+  .map((pattern) => pattern.trim())
+  .filter(Boolean)
+  .map((pattern) => {
+    try {
+      return new RegExp(pattern);
+    } catch (error) {
+      console.warn(`⚠️  Invalid CORS regex pattern skipped: ${pattern}`);
+      return null;
+    }
+  })
+  .filter(Boolean);
+
 // Middleware
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin || allowedOrigins.includes(origin) || regexOrigins.some((regex) => regex.test(origin))) {
       return callback(null, true);
     }
     return callback(new Error(`CORS blocked origin: ${origin}`));
