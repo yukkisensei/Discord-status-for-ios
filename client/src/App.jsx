@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import LoadingScreen from './components/LoadingScreen';
 
 axios.defaults.withCredentials = true;
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || '';
 
 function App() {
   const [user, setUser] = useState(null);
